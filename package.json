@@ -1,0 +1,57 @@
+{
+  "name": "shoppwa-ecommerce",
+  "version": "1.0.0",
+  "description": "A Progressive Web App for e-commerce with offline support and push notifications",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "dev": "npx http-server . -p 3000 -c-1 -o",
+    "build": "echo 'Build completed - PWA is ready for deployment'",
+    "test": "echo 'No tests specified yet'",
+    "lighthouse": "npx lighthouse http://localhost:3000 --view",
+    "pwa-audit": "npx lighthouse http://localhost:3000 --only-categories=pwa --view"
+  },
+  "keywords": [
+    "pwa",
+    "progressive-web-app",
+    "ecommerce",
+    "offline",
+    "service-worker",
+    "push-notifications",
+    "cache-api",
+    "web-app-manifest"
+  ],
+  "author": "CODTECH Intern",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.4.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/shoppwa-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/shoppwa-ecommerce/issues"
+  },
+  "homepage": "https://your-username.github.io/shoppwa-ecommerce",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "pwa": {
+    "name": "ShopPWA",
+    "short_name": "ShopPWA",
+    "theme_color": "#2196F3",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/"
+  }
+}

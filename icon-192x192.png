@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <!-- Background -->
+  <rect width="192" height="192" rx="38" fill="#2196F3"/>
+  
+  <!-- Shopping Bag Icon -->
+  <path d="M60 58V46C60 34.9543 68.9543 26 80 26H112C123.046 26 132 34.9543 132 46V58M60 58H132M60 58H48C43.5817 58 40 61.5817 40 66V146C40 155.941 48.0589 164 58 164H134C143.941 164 152 155.941 152 146V66C152 61.5817 148.418 58 144 58H132" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Handles -->
+  <path d="M80 58V46C80 45.4477 80.4477 45 81 45H111C111.552 45 112 45.4477 112 46V58" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- PWA Text -->
+  <text x="96" y="120" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="white">ShopPWA</text>
+</svg>

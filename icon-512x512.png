@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="102" fill="#2196F3"/>
+  
+  <!-- Shopping Bag Icon -->
+  <path d="M160 154V122C160 93.2812 183.281 70 212 70H300C328.719 70 352 93.2812 352 122V154M160 154H352M160 154H128C118.477 154 110.5 161.977 110.5 171.5V390C110.5 425.898 139.602 455 175.5 455H336.5C372.398 455 401.5 425.898 401.5 390V171.5C401.5 161.977 393.523 154 384 154H352" stroke="white" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Handles -->
+  <path d="M212 154V122C212 120.895 212.895 120 214 120H298C299.105 120 300 120.895 300 122V154" stroke="white" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Shopping Cart Items -->
+  <circle cx="200" cy="250" r="15" fill="white" opacity="0.8"/>
+  <circle cx="256" cy="280" r="15" fill="white" opacity="0.8"/>
+  <circle cx="312" cy="250" r="15" fill="white" opacity="0.8"/>
+  
+  <!-- PWA Text -->
+  <text x="256" y="350" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">ShopPWA</text>
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" opacity="0.9">E-Commerce</text>
+</svg>

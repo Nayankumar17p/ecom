@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPWA - E-commerce Platform</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="icon" href="icon-192x192.png" type="image/png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>ShopPWA</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button id="notification-btn" class="btn-secondary">Enable Notifications</button>
+                <div id="connection-status" class="status-indicator"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to ShopPWA</h2>
+                <p>Your offline-ready e-commerce experience</p>
+                <button class="btn-primary" onclick="scrollToProducts()">Shop Now</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="cart-section" style="display: none;">
+            <div class="container">
+                <h2>Shopping Cart</h2>
+                <div id="cart-items" class="cart-items">
+                    <!-- Cart items will be loaded dynamically -->
+                </div>
+                <div class="cart-total">
+                    <h3>Total: $<span id="cart-total">0.00</span></h3>
+                    <button id="checkout-btn" class="btn-primary">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ShopPWA. Built with PWA technology for offline shopping.</p>
+        </div>
+    </footer>
+
+    <!-- Offline Banner -->
+    <div id="offline-banner" class="offline-banner" style="display: none;">
+        <p>You're currently offline. Some features may be limited.</p>
+    </div>
+
+    <!-- Install Prompt -->
+    <div id="install-prompt" class="install-prompt" style="display: none;">
+        <p>Install ShopPWA for the best experience!</p>
+        <button id="install-btn" class="btn-primary">Install</button>
+        <button id="dismiss-install" class="btn-secondary">Dismiss</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
